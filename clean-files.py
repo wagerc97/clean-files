@@ -4,6 +4,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 
 
 def rename_files(folder_path=None):
@@ -58,11 +59,6 @@ def rename_files(folder_path=None):
             file_path = new_file_path
 
         # Convert PPTX files to PDF using LibreOffice
-        #if file_ext == '.pptx':
-        #    subprocess.run(['soffice', '--headless', '--convert-to', 'pdf', file_path])
-        #    print(f'Converted ".pptx" file: {filename} -> PDF')
-
-        # Convert PPTX files to PDF using LibreOffice
         if file_ext == '.pptx':
             pdf_filename = os.path.splitext(filename)[0] + '.pdf'
             pdf_file_path = os.path.join(folder_path, pdf_filename)
@@ -72,6 +68,7 @@ def rename_files(folder_path=None):
             # Update the file path for further operations
             file_path = pdf_file_path
             filename = pdf_filename
+            time.sleep(5)   # wait for conversion to be done
 
         # Compress PDF files using Ghostscript
         if file_ext == '.pdf':
