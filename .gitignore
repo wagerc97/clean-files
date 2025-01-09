@@ -1,0 +1,62 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Python specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Editor and IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Compiled files
+*.class
+*.o
+*.so
+*.out
+
+# Node.js specific
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mac specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Miscellaneous
+*.tmp
+*.cache
+*.pid
+*.seed
+*.lock
+*.env
