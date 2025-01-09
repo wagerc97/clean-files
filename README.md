@@ -8,7 +8,7 @@ This script formats files to fit a common pdf standard making them machine reada
 
 ## Usage:
 Call the script with a folder name to clean all files in this folder on the first level. 
-Any subdirectories are ignored. The user is prompted before script execution. 
+Any subdirectories are ignored. The user is prompted for confirmation. 
 
 ### Example: 
 
