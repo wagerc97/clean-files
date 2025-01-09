@@ -1,18 +1,20 @@
 #!/usr/bin/python3
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-PURPOSE:
-This script formats files to fit a common pdf standard.
-    - whitespace and other problematic symbols in the file name are substituted. 
-    - pdfs are compressed with ghost script
-    - pptx files are converted to pdf (the script will re-iterate over any new pdfs created)
 
-USAGE:
+## PURPOSE:
+This script formats files to fit a common pdf standard making them machine readable. 
+- whitespace and other problematic symbols in the file name are substituted. 
+- pdfs are compressed with ghost script
+- pptx files are converted to pdf (the script will re-iterate over any new pdfs created)
+
+## USAGE:
 Call the script with a folder name to clean all files in this folder on the first level. 
-Any subdirectories are ignored. The user is prompted before script execution (defaults to YES). 
+Any subdirectories are ignored. The user is prompted before script execution. 
 
-EXAMPLE USAGE: 
-$ ./clean-files.py folder123/
+### EXAMPLE USAGE: 
+
+./clean-files.py ./path/to/folder/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -20,7 +22,6 @@ import os
 import re
 import subprocess
 import sys
-#import time
 
 
 def clean(folder_path, new_file_list=None):
@@ -132,6 +133,8 @@ if __name__ == '__main__':
 
     # Check if the folder path argument is provided
     if len(sys.argv) > 1:
+        raise UserWarning(f"Invalid command! User tried to call: {sys.argv}")
+    elif len(sys.argv) == 2:
         # Pass the folder path as an argument when calling the function
         folder_path = sys.argv[1]
     else:
